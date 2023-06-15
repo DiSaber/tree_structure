@@ -1,6 +1,6 @@
 pub struct Node<T: Clone> {
     pub value: T,
-    pub children: Vec<Box<Node<T>>>,
+    pub children: Vec<Node<T>>,
 }
 
 impl<T: Clone> Node<T> {
@@ -9,10 +9,6 @@ impl<T: Clone> Node<T> {
             value,
             children: Vec::new(),
         }
-    }
-
-    pub fn push_child(&mut self, node: Node<T>) {
-        self.children.push(Box::new(node));
     }
 }
 
