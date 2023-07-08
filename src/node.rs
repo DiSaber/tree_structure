@@ -1,9 +1,9 @@
-pub struct Node<T: Clone> {
+pub struct Node<T> {
     pub value: T,
     pub children: Vec<Node<T>>,
 }
 
-impl<T: Clone> Node<T> {
+impl<T> Node<T> {
     pub fn new(value: T) -> Self {
         Self {
             value,
